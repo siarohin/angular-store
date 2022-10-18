@@ -1,0 +1,5 @@
+<div class="grid-container" [ngClass]="{ 'single-columns': isList, 'four-columns': !isList }">
+  <app-card *ngFor="let item of data | searchByTag: (tag | lowercase) | sortByValue: sortValue"
+            [data]="item"
+            [isList]="isList"></app-card>
+</div>
